@@ -46,5 +46,4 @@ def search_companies(query, df):
 query = st.text_input('Enter search query:')
 if query:
     results = search_companies(query, df_embeddings)
-    st.write(results[['Name', 'Description', 'Action','similarity']])
-
+    st.dataframe(results[['Name', 'Description', 'Action', 'similarity']], height=800)
